@@ -6,7 +6,7 @@ const Feedback = (props) => {
   const { feedbackItem } = props;
   //! redundant but ok for learning dyanmic api routes
   const getFeedbackHandler = async (id) => {
-    const response = await fetch(`/api/${id}`);
+    const response = await fetch(`/api/feedback/${id}`);
     const { feedback } = await response.json();
     setFeedback(feedback);
   };
