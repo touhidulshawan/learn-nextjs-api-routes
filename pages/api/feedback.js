@@ -11,7 +11,7 @@ export const extractFeedbackData = (filePath) => {
   return data;
 };
 
-const feedbackHandler = (req, res) => {
+const handler = (req, res) => {
   if (req.method === "POST") {
     const newFeedback = {
       id: new Date().toISOString(),
@@ -29,4 +29,4 @@ const feedbackHandler = (req, res) => {
   }
 };
 
-export default feedbackHandler;
+export default handler;
