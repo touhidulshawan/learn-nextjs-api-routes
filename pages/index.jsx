@@ -9,17 +9,13 @@ const Home = () => {
     evt.preventDefault();
 
     const reqBody = { email, message };
-    const res = await fetch("/api/feedback", {
+    await fetch("/api/feedback", {
       method: "POST",
       body: JSON.stringify(reqBody),
       headers: {
         "Content-Type": "application/json",
       },
     });
-
-    const { data } = await res.json();
-    console.log(data);
-
     setEmail("");
     setMessage("");
   };
