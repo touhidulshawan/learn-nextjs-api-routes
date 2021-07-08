@@ -2,9 +2,9 @@ import { useState } from "react";
 import { buildFeedbackPath, extractFeedbackData } from "../api/feedback";
 
 const Feedback = (props) => {
-  const [feedback, setFeedback] = useState();
+  const [feedback, setFeedback] = useState(); //! redundant
   const { feedbackItem } = props;
-
+  //! redundant but ok for learning dyanmic api routes
   const getFeedbackHandler = async (id) => {
     const response = await fetch(`/api/${id}`);
     const { feedback } = await response.json();
